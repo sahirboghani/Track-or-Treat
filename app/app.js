@@ -2,7 +2,7 @@
  * Created by Sahir on 7/3/2015.
  */
 
-var app = angular.module('TrackorTreatApp', ['ngRoute']);
+var app = angular.module('TrackorTreatApp', ['ngRoute', 'ui.bootstrap']);
 
 app.config(['$routeProvider',
     function($routeProvider) {

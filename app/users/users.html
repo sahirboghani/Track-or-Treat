@@ -1,1 +1,19 @@
 <h1>Users Page</h1>
+
+<accordion>
+    <div class="row" ng-repeat="user in users">
+        <accordion-group class="col-sm-8 btn-success">
+            <accordion-heading>
+                <div class="row">
+                    <div class="pull-left">
+                        <strong>{{user.name}}</strong>
+                    </div>
+                    <div class="pull-right">
+                        <span><i class="fa fa-plus-square-o"></i></span>
+                    </div>
+                </div>
+            </accordion-heading>
+c            Weight: {{user.weight}}
+        </accordion-group>
+    </div>
+</accordion>
