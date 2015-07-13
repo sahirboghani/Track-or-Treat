@@ -1,0 +1,5 @@
+body {
+    background-image: url('../assets/dumbell.png');
+}
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
