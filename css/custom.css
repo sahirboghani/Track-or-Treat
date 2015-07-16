@@ -2,4 +2,22 @@ body {
     background-image: url('../assets/dumbell.png');
 }
 
+textarea {
+    resize: none;
+}
+
+.chat {
+    margin: 0 0 0 0;
+}
+
+.chatmessages {
+    list-style-type: none;
+    padding-left: 4px;
+}
+
+.my .panel-heading {
+    background-color: blue;
+    /*color: #A6A6A6;*/
+}
+
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
