@@ -43,7 +43,10 @@ app.controller('HeaderCtrl', function($scope, $location, $firebaseArray) {
     };
 
     $scope.clear = function() {
-
+        var i = $scope.messages.length;
+        while(i-- > 0) {
+            $scope.messages.$remove($scope.messages[i]);
+        }
     };
 });
 

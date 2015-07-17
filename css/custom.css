@@ -10,6 +10,10 @@ textarea {
     margin: 0 0 0 0;
 }
 
+.removemessage {
+    margin-right: 60px;
+}
+
 .chatmessages {
     list-style-type: none;
     padding-left: 4px;

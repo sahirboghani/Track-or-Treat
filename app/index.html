@@ -46,18 +46,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-2">
-                <input ng-model="name" type="text" maxlength="15" placeholder="Enter Name..">
-
+            <div class="col-sm-2 chat">
+                <input ng-model="name" class="form-control" type="text" maxlength="15" placeholder="Enter Name..">
+                <br>
                 <ul class="chatmessages">
                     <li ng-repeat="msg in messages">
                         <strong>{{msg.from}}</strong>
                         {{msg.body}}
+                        <a href="" ng-click="messages.$remove(msg)" class="pull-right"><i class="fa fa-eraser"></i></a>
                     </li>
                 </ul>
-
-                <input ng-model="msg" [ng-trim="true"] data-ng-keydown="addMessage($event)" type="text" maxlength="30" placeholder="Enter Message">
-                <br><br>
+                <input ng-model="msg" [ng-trim="true"] class="form-control" data-ng-keydown="addMessage($event)" type="text" maxlength="30" placeholder="Enter Message..">
+                <br>
                 <button class="btn btn-danger" ng-click="clear()">Clear Chat</button>
             </div>
         </div>
