@@ -37,16 +37,7 @@
         </nav>
 
         <div class="row">
-            <div class="col-sm-2">
-
-            </div>
-            <div class="col-sm-8">
-                <div class="container">
-                    <div ng-view="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2 chat">
+            <div class="col-sm-2 col-md-2 col-lg-2" style="margin-left: 3pxcd ">
                 <input ng-model="name" class="form-control" type="text" maxlength="15" placeholder="Enter Name..">
                 <br>
                 <ul class="chatmessages">
@@ -59,6 +50,13 @@
                 <input ng-model="msg" [ng-trim="true"] class="form-control" data-ng-keydown="addMessage($event)" type="text" maxlength="30" placeholder="Enter Message..">
                 <br>
                 <button class="btn btn-danger" ng-click="clear()">Clear Chat</button>
+            </div>
+            <div class="col-sm-8 col-md-8 col-lg-8">
+                <div ng-view="">
+                </div>
+            </div>
+            <div class="col-sm-2 col-md-2 col-lg-2 chat">
+
             </div>
         </div>
 
