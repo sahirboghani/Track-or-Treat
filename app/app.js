@@ -16,12 +16,16 @@ app.config(['$routeProvider',
                 templateUrl: 'users/users.html',
                 controller: 'UsersCtrl'
             }).
+            when('/chat', {
+                templateUrl: 'chat/chat.html',
+                controller: 'ChatCtrl'
+            }).
             otherwise({
                redirectTo: 'home'
             });
 }]);
 
-app.controller('HeaderCtrl', function($scope, $location, $firebaseArray) {
+app.controller('ChatCtrl', function($scope, $location, $firebaseArray) {
 
     // Firebase reference
     var url = new Firebase("https://trackortreat.firebaseio.com/");
@@ -38,10 +42,6 @@ app.controller('HeaderCtrl', function($scope, $location, $firebaseArray) {
         }
     };
 
-    $scope.isActive = function(viewLocation) {
-       return $location.path().indexOf(viewLocation) == 0;
-    };
-
     $scope.clear = function() {
         var i = $scope.messages.length;
         while(i-- > 0) {
@@ -52,6 +52,14 @@ app.controller('HeaderCtrl', function($scope, $location, $firebaseArray) {
 
 app.controller('HomeCtrl', function($scope, $firebaseArray) {
 });
+
+app.controller('NavCtrl', function($scope, $location, $firebaseArray) {
+    $scope.isActive = function(viewLocation) {
+        return $location.path().indexOf(viewLocation) == 0;
+    };
+});
+
+
 /*app.controller('HomeCtrl', ["$scope", "$firebaseArray",
     function($scope, $firebaseArray) {
         // Firebase reference

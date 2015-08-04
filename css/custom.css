@@ -1,13 +1,8 @@
 body {
     background-image: url('../assets/dumbell.png');
 }
-
 textarea {
     resize: none;
-}
-
-.chat {
-    margin: 0 0 0 0;
 }
 
 .removemessage {
