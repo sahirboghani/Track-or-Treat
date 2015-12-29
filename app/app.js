@@ -36,7 +36,7 @@ app.controller('ChatCtrl', function($scope, $location, $firebaseArray) {
         if(event.keyCode === 13 && $scope.msg) {
             var name = $scope.name || "Anonymous";
 
-            $scope.messages.$add({from: name, body: $scope.msg});
+            $scope.messages.add({from: name, body: $scope.msg});
 
             $scope.msg = "";
         }
